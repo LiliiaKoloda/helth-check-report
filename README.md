@@ -3,6 +3,8 @@
 This is but a simple Bash script for collecting key system health information, then displaying the data in but a readable format. It is intended of quick diagnostics and monitoring on Linux systems.
 ## Purpose
 This script was created a bit as part of my learning. This was a little bit for practice in Linux system administration and infrastructure support.
+## Environment
+This script was developed as well as tested on an Ubuntu-based EC2 instance deployed in AWS.
 ## What it checks
 - ✅ Date and system run-time
 - ✅ OS version in addition to kernel.
