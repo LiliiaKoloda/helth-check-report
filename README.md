@@ -1,4 +1,4 @@
-# Helth-check-report
+# Health-check-report
 
 This is but a simple Bash script for collecting key system health information, then displaying the data in but a readable format. It is intended of quick diagnostics and monitoring on Linux systems.
 ## Purpose
