@@ -1,0 +1,280 @@
+Script started at: Thu Apr 10 02:01:20 UTC 2025
+Linux ip-172-31-45-59 6.8.0-1024-aws #26-Ubuntu SMP Tue Feb 18 17:22:37 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+PRETTY_NAME="Ubuntu 24.04.2 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.2 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+ 02:01:20 up  1:42,  2 users,  load average: 0.00, 0.00, 0.00
+CPU Load (top): 0%
+CPU Load (mpstat): 0%
+Load Average: 0.00 0.00 0.00
+Free memory: 129MB
+Filesystem       Size  Used Avail Use% Mounted on
+/dev/root        6.8G  2.0G  4.8G  29% /
+efivarfs         128K  3.6K  120K   3% /sys/firmware/efi/efivars
+/dev/nvme0n1p16  881M   79M  741M  10% /boot
+/dev/nvme0n1p15  105M  6.1M   99M   6% /boot/efi
+Filesystem: /dev/root
+Total inodes: 917504
+Used inodes: 81038
+Free inodes: 836466
+Used percentage: 9%
+Mounted on: /
+
+Filesystem: tmpfs
+Total inodes: 117011
+Used inodes: 2
+Free inodes: 117009
+Used percentage: 1%
+Mounted on: /dev/shm
+
+Filesystem: tmpfs
+Total inodes: 819200
+Used inodes: 664
+Free inodes: 818536
+Used percentage: 1%
+Mounted on: /run
+
+Filesystem: tmpfs
+Total inodes: 117011
+Used inodes: 3
+Free inodes: 117008
+Used percentage: 1%
+Mounted on: /run/lock
+
+Filesystem: efivarfs
+Total inodes: 0
+Used inodes: 0
+Free inodes: 0
+Used percentage: -
+Mounted on: /sys/firmware/efi/efivars
+
+Skipping: Unable to determine inode percentage for /sys/firmware/efi/efivars
+Filesystem: /dev/nvme0n1p16
+Total inodes: 58496
+Used inodes: 601
+Free inodes: 57895
+Used percentage: 2%
+Mounted on: /boot
+
+Filesystem: /dev/nvme0n1p15
+Total inodes: 0
+Used inodes: 0
+Free inodes: 0
+Used percentage: -
+Mounted on: /boot/efi
+
+Skipping: Unable to determine inode percentage for /boot/efi
+Filesystem: tmpfs
+Total inodes: 23402
+Used inodes: 32
+Free inodes: 23370
+Used percentage: 1%
+Mounted on: /run/user/1000
+
+    PID    PPID CMD                         %MEM %CPU
+   2032    1973 sshd: ubuntu@pts/1           0.7  0.0
+   1827       1 /usr/libexec/fwupd/fwupd     4.3  0.0
+      1       0 /sbin/init                   1.4  0.0
+    617       1 /usr/lib/snapd/snapd         3.5  0.0
+   3306       2 [kworker/u4:1-efi_rts_wq]    0.0  0.0
+    982       1 /snap/amazon-ssm-agent/9881  2.0  0.0
+     10       2 [kworker/0:1-events]         0.0  0.0
+   2776       2 [kworker/u4:2-flush-259:0]   0.0  0.0
+   2256       2 [kworker/u4:0-events_power_  0.0  0.0
+     58       2 [kworker/1:2-events]         0.0  0.0
+    PID    PPID CMD                         %MEM %CPU
+   1827       1 /usr/libexec/fwupd/fwupd     4.3  0.0
+    617       1 /usr/lib/snapd/snapd         3.5  0.0
+    188       1 /sbin/multipathd -d -s       2.8  0.0
+    750       1 /usr/bin/python3 /usr/share  2.4  0.0
+    610       1 /usr/bin/python3 /usr/bin/n  2.2  0.0
+    982       1 /snap/amazon-ssm-agent/9881  2.0  0.0
+    126       1 /usr/lib/systemd/systemd-jo  1.5  0.0
+      1       0 /sbin/init                   1.4  0.0
+    621       1 /usr/libexec/udisks2/udisks  1.4  0.0
+    331       1 /usr/lib/systemd/systemd-re  1.3  0.0
+● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/usr/lib/systemd/system/ssh.service; disabled; preset: enabled)
+    Drop-In: /usr/lib/systemd/system/ssh.service.d
+             └─ec2-instance-connect.conf
+     Active: active (running) since Thu 2025-04-10 00:24:07 UTC; 1h 37min ago
+TriggeredBy: ● ssh.socket
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+    Process: 1069 ExecStartPre=/usr/sbin/sshd -t (code=exited, status=0/SUCCESS)
+   Main PID: 1071 (sshd)
+      Tasks: 1 (limit: 1077)
+     Memory: 5.8M (peak: 8.6M)
+        CPU: 2.838s
+     CGroup: /system.slice/ssh.service
+             └─1071 "sshd: /usr/sbin/sshd -D -o AuthorizedKeysCommand /usr/share/ec2-instance-connect/eic_run_authorized_keys %u %f -o AuthorizedKeysCommandUser ec2-instance-connect [listener] 0 of 10-100 startups"
+
+Apr 10 01:26:24 ip-172-31-45-59 sshd[2402]: Invalid user pi from 64.23.152.175 port 48968
+Apr 10 01:26:24 ip-172-31-45-59 sshd[2402]: Connection closed by invalid user pi 64.23.152.175 port 48968 [preauth]
+Apr 10 01:26:31 ip-172-31-45-59 sshd[2404]: Invalid user admin from 64.23.152.175 port 48984
+Apr 10 01:26:31 ip-172-31-45-59 sshd[2404]: Connection closed by invalid user admin 64.23.152.175 port 48984 [preauth]
+Apr 10 01:26:50 ip-172-31-45-59 sshd[2406]: Connection closed by authenticating user ubuntu 64.23.152.175 port 55208 [preauth]
+Apr 10 01:26:51 ip-172-31-45-59 sshd[2408]: Invalid user cs2sv from 64.23.152.175 port 55224
+Apr 10 01:26:51 ip-172-31-45-59 sshd[2408]: Connection closed by invalid user cs2sv 64.23.152.175 port 55224 [preauth]
+Apr 10 01:26:52 ip-172-31-45-59 sshd[2410]: Connection closed by authenticating user root 64.23.152.175 port 55226 [preauth]
+Apr 10 01:26:59 ip-172-31-45-59 sshd[2412]: Invalid user test from 64.23.152.175 port 36728
+Apr 10 01:26:59 ip-172-31-45-59 sshd[2412]: Connection closed by invalid user test 64.23.152.175 port 36728 [preauth]
+  UNIT                                           LOAD   ACTIVE SUB     DESCRIPTION
+  acpid.service                                  loaded active running ACPI event daemon
+  apparmor.service                               loaded active exited  Load AppArmor profiles
+  apport.service                                 loaded active exited  automatic crash report generation
+  blk-availability.service                       loaded active exited  Availability of block devices
+  chrony.service                                 loaded active running chrony, an NTP client/server
+  cloud-config.service                           loaded active exited  Cloud-init: Config Stage
+  cloud-final.service                            loaded active exited  Cloud-init: Final Stage
+  cloud-init-local.service                       loaded active exited  Cloud-init: Local Stage (pre-network)
+  cloud-init.service                             loaded active exited  Cloud-init: Network Stage
+  console-setup.service                          loaded active exited  Set console font and keymap
+  cron.service                                   loaded active running Regular background program processing daemon
+  dbus.service                                   loaded active running D-Bus System Message Bus
+  finalrd.service                                loaded active exited  Create final runtime dir for shutdown pivot root
+  fwupd.service                                  loaded active running Firmware update daemon
+  getty@tty1.service                             loaded active running Getty on tty1
+  irqbalance.service                             loaded active running irqbalance daemon
+  keyboard-setup.service                         loaded active exited  Set the console keyboard layout
+  kmod-static-nodes.service                      loaded active exited  Create List of Static Device Nodes
+  ldconfig.service                               loaded active exited  Rebuild Dynamic Linker Cache
+  lvm2-monitor.service                           loaded active exited  Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling
+  ModemManager.service                           loaded active running Modem Manager
+  multipathd.service                             loaded active running Device-Mapper Multipath Device Controller
+  networkd-dispatcher.service                    loaded active running Dispatcher daemon for systemd-networkd
+  plymouth-quit-wait.service                     loaded active exited  Hold until boot process finishes up
+  plymouth-quit.service                          loaded active exited  Terminate Plymouth Boot Screen
+  plymouth-read-write.service                    loaded active exited  Tell Plymouth To Write Out Runtime Data
+  polkit.service                                 loaded active running Authorization Manager
+  rsyslog.service                                loaded active running System Logging Service
+  serial-getty@ttyS0.service                     loaded active running Serial Getty on ttyS0
+  setvtrgb.service                               loaded active exited  Set console scheme
+  snap.amazon-ssm-agent.amazon-ssm-agent.service loaded active running Service for snap application amazon-ssm-agent.amazon-ssm-agent
+  snapd.apparmor.service                         loaded active exited  Load AppArmor profiles managed internally by snapd
+  snapd.seeded.service                           loaded active exited  Wait until snapd is fully seeded
+  snapd.service                                  loaded active running Snap Daemon
+  ssh.service                                    loaded active running OpenBSD Secure Shell server
+  sysstat.service                                loaded active exited  Resets System Activity Logs
+  systemd-binfmt.service                         loaded active exited  Set Up Additional Binary Formats
+  systemd-fsck-root.service                      loaded active exited  File System Check on Root Device
+  systemd-fsck@dev-disk-by\x2dlabel-BOOT.service loaded active exited  File System Check on /dev/disk/by-label/BOOT
+  systemd-fsck@dev-disk-by\x2dlabel-UEFI.service loaded active exited  File System Check on /dev/disk/by-label/UEFI
+  systemd-journal-catalog-update.service         loaded active exited  Rebuild Journal Catalog
+  systemd-journal-flush.service                  loaded active exited  Flush Journal to Persistent Storage
+  systemd-journald.service                       loaded active running Journal Service
+  systemd-logind.service                         loaded active running User Login Management
+  systemd-machine-id-commit.service              loaded active exited  Commit a transient machine-id on disk
+  systemd-modules-load.service                   loaded active exited  Load Kernel Modules
+  systemd-networkd-wait-online.service           loaded active exited  Wait for Network to be Configured
+  systemd-networkd.service                       loaded active running Network Configuration
+  systemd-random-seed.service                    loaded active exited  Load/Save OS Random Seed
+  systemd-remount-fs.service                     loaded active exited  Remount Root and Kernel File Systems
+  systemd-resolved.service                       loaded active running Network Name Resolution
+  systemd-sysctl.service                         loaded active exited  Apply Kernel Variables
+  systemd-sysusers.service                       loaded active exited  Create System Users
+  systemd-tmpfiles-setup-dev-early.service       loaded active exited  Create Static Device Nodes in /dev gracefully
+  systemd-tmpfiles-setup-dev.service             loaded active exited  Create Static Device Nodes in /dev
+  systemd-tmpfiles-setup.service                 loaded active exited  Create Volatile Files and Directories
+  systemd-udev-trigger.service                   loaded active exited  Coldplug All udev Devices
+  systemd-udevd.service                          loaded active running Rule-based Manager for Device Events and Files
+  systemd-update-done.service                    loaded active exited  Update is Completed
+  systemd-update-utmp.service                    loaded active exited  Record System Boot/Shutdown in UTMP
+  systemd-user-sessions.service                  loaded active exited  Permit User Sessions
+  udisks2.service                                loaded active running Disk Manager
+  ufw.service                                    loaded active exited  Uncomplicated firewall
+  unattended-upgrades.service                    loaded active running Unattended Upgrades Shutdown
+  user-runtime-dir@1000.service                  loaded active exited  User Runtime Directory /run/user/1000
+  user@1000.service                              loaded active running User Manager for UID 1000
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+66 loaded units listed.
+Checking IP addresses...
+lo 127.0.0.1/8
+ens5 172.31.45.59/20
+IPv6 Addresses:
+lo ::1/128
+ens5 fe80::8e2:39ff:feee:1649/64
+Checking internet connectivity...
+Ping to 8.8.8.8 successful!
+Connection to Google successful!
+Checking open ports...
+Netid State  Recv-Q Send-Q     Local Address:Port Peer Address:PortProcess
+udp   UNCONN 0      0              127.0.0.1:323       0.0.0.0:*          
+udp   UNCONN 0      0             127.0.0.54:53        0.0.0.0:*          
+udp   UNCONN 0      0          127.0.0.53%lo:53        0.0.0.0:*          
+udp   UNCONN 0      0      172.31.45.59%ens5:68        0.0.0.0:*          
+udp   UNCONN 0      0                  [::1]:323          [::]:*          
+tcp   LISTEN 0      4096          127.0.0.54:53        0.0.0.0:*          
+tcp   LISTEN 0      4096       127.0.0.53%lo:53        0.0.0.0:*          
+tcp   LISTEN 0      4096                   *:22              *:*          
+Print last 10 error messages:
+Apr 10 00:18:42 ubuntu kernel: RETBleed: WARNING: Spectre v2 mitigation leaves CPU vulnerable to RETBleed attacks, data leaks possible!
+Apr 10 01:07:18 ip-172-31-45-59 sshd[1872]: error: Received disconnect from 5.173.160.27 port 59157:14: No supported authentication methods available [preauth]
+Apr 10 01:25:40 ip-172-31-45-59 sshd[2385]: error: kex_exchange_identification: read: Connection reset by peer
+Print errors from syslog:
+2025-04-10T00:18:54.327127+00:00 ip-172-31-45-59 kernel: RAS: Correctable Errors collector initialized.
+2025-04-10T00:18:54.330021+00:00 ip-172-31-45-59 systemd[1]: apport-autoreport.path - Process error reports when automatic reporting is enabled (file watch) was skipped because of an unmet condition check (ConditionPathExists=/var/lib/apport/autoreport).
+2025-04-10T00:18:54.330031+00:00 ip-172-31-45-59 systemd[1]: apport-autoreport.timer - Process error reports when automatic reporting is enabled (timer based) was skipped because of an unmet condition check (ConditionPathExists=/var/lib/apport/autoreport).
+2025-04-10T00:18:58.065726+00:00 ip-172-31-45-59 amazon-ssm-agent.amazon-ssm-agent[982]: Error occurred fetching the seelog config file path:  open /etc/amazon/ssm/seelog.xml: no such file or directory
+2025-04-10T00:18:58.068280+00:00 ip-172-31-45-59 amazon-ssm-agent.amazon-ssm-agent[982]: 2025-04-10 00:18:58.0667 WARN Error adding the directory '/etc/amazon/ssm' to watcher: no such file or directory
+2025-04-10T00:19:00.257372+00:00 ip-172-31-45-59 amazon-ssm-agent.amazon-ssm-agent[982]: 2025-04-10 00:18:58.3380 WARN EC2RoleProvider Failed to connect to Systems Manager with instance profile role credentials. Err: retrieved credentials failed to report to ssm. Error: EC2RoleRequestError: no EC2 instance role found
+2025-04-10T00:19:00.257464+00:00 ip-172-31-45-59 amazon-ssm-agent.amazon-ssm-agent[982]: caused by: EC2MetadataError: failed to make EC2Metadata request
+2025-04-10T00:19:00.357707+00:00 ip-172-31-45-59 amazon-ssm-agent.amazon-ssm-agent[982]: 2025-04-10 00:18:58.3828 ERROR EC2RoleProvider Failed to connect to Systems Manager with SSM role credentials. error calling RequestManagedInstanceRoleToken: AccessDeniedException: Systems Manager's instance management role is not configured for account: 687850516207
+2025-04-10T00:19:01.797940+00:00 ip-172-31-45-59 amazon-ssm-agent.amazon-ssm-agent[982]: 2025-04-10 00:18:58.3828 ERROR [CredentialRefresher] Retrieve credentials produced error: no valid credentials could be retrieved for ec2 identity. Default Host Management Err: error calling RequestManagedInstanceRoleToken: AccessDeniedException: Systems Manager's instance management role is not configured for account: 687850516207
+2025-04-10T00:45:03.824069+00:00 ip-172-31-45-59 amazon-ssm-agent.amazon-ssm-agent[982]: 2025-04-10 00:45:03.8234 WARN EC2RoleProvider Failed to connect to Systems Manager with instance profile role credentials. Err: retrieved credentials failed to report to ssm. Error: EC2RoleRequestError: no EC2 instance role found
+2025-04-10T00:45:03.824159+00:00 ip-172-31-45-59 amazon-ssm-agent.amazon-ssm-agent[982]: caused by: EC2MetadataError: failed to make EC2Metadata request
+2025-04-10T00:45:03.925105+00:00 ip-172-31-45-59 amazon-ssm-agent.amazon-ssm-agent[982]: 2025-04-10 00:45:03.8739 ERROR EC2RoleProvider Failed to connect to Systems Manager with SSM role credentials. error calling RequestManagedInstanceRoleToken: AccessDeniedException: Systems Manager's instance management role is not configured for account: 687850516207
+2025-04-10T00:45:04.025640+00:00 ip-172-31-45-59 amazon-ssm-agent.amazon-ssm-agent[982]: 2025-04-10 00:45:03.8739 ERROR [CredentialRefresher] Retrieve credentials produced error: no valid credentials could be retrieved for ec2 identity. Default Host Management Err: error calling RequestManagedInstanceRoleToken: AccessDeniedException: Systems Manager's instance management role is not configured for account: 687850516207
+2025-04-10T01:00:27.058647+00:00 ip-172-31-45-59 fwupd[1827]: 01:00:27.058 FuPluginLinuxSleep   could not open /sys/power/mem_sleep: Error opening file /sys/power/mem_sleep: No such file or directory
+2025-04-10T01:10:08.876194+00:00 ip-172-31-45-59 amazon-ssm-agent.amazon-ssm-agent[982]: 2025-04-10 01:10:08.8756 WARN EC2RoleProvider Failed to connect to Systems Manager with instance profile role credentials. Err: retrieved credentials failed to report to ssm. Error: EC2RoleRequestError: no EC2 instance role found
+2025-04-10T01:10:08.876286+00:00 ip-172-31-45-59 amazon-ssm-agent.amazon-ssm-agent[982]: caused by: EC2MetadataError: failed to make EC2Metadata request
+2025-04-10T01:10:08.978244+00:00 ip-172-31-45-59 amazon-ssm-agent.amazon-ssm-agent[982]: 2025-04-10 01:10:08.9234 ERROR EC2RoleProvider Failed to connect to Systems Manager with SSM role credentials. error calling RequestManagedInstanceRoleToken: AccessDeniedException: Systems Manager's instance management role is not configured for account: 687850516207
+2025-04-10T01:10:09.078659+00:00 ip-172-31-45-59 amazon-ssm-agent.amazon-ssm-agent[982]: 2025-04-10 01:10:08.9234 ERROR [CredentialRefresher] Retrieve credentials produced error: no valid credentials could be retrieved for ec2 identity. Default Host Management Err: error calling RequestManagedInstanceRoleToken: AccessDeniedException: Systems Manager's instance management role is not configured for account: 687850516207
+2025-04-10T01:36:55.925628+00:00 ip-172-31-45-59 amazon-ssm-agent.amazon-ssm-agent[982]: 2025-04-10 01:36:55.9250 WARN EC2RoleProvider Failed to connect to Systems Manager with instance profile role credentials. Err: retrieved credentials failed to report to ssm. Error: EC2RoleRequestError: no EC2 instance role found
+2025-04-10T01:36:55.925796+00:00 ip-172-31-45-59 amazon-ssm-agent.amazon-ssm-agent[982]: caused by: EC2MetadataError: failed to make EC2Metadata request
+2025-04-10T01:36:56.025716+00:00 ip-172-31-45-59 amazon-ssm-agent.amazon-ssm-agent[982]: 2025-04-10 01:36:55.9715 ERROR EC2RoleProvider Failed to connect to Systems Manager with SSM role credentials. error calling RequestManagedInstanceRoleToken: AccessDeniedException: Systems Manager's instance management role is not configured for account: 687850516207
+Checking mount points:
+/dev/nvme0n1p1                                   on  /                            type  ext4         (rw,relatime,discard,errors=remount-ro,commit=30)
+devtmpfs                                         on  /dev                         type  devtmpfs     (rw,nosuid,noexec,relatime,size=459620k,nr_inodes=114905,mode=755,inode64)
+proc                                             on  /proc                        type  proc         (rw,nosuid,nodev,noexec,relatime)
+sysfs                                            on  /sys                         type  sysfs        (rw,nosuid,nodev,noexec,relatime)
+securityfs                                       on  /sys/kernel/security         type  securityfs   (rw,nosuid,nodev,noexec,relatime)
+tmpfs                                            on  /dev/shm                     type  tmpfs        (rw,nosuid,nodev,inode64)
+devpts                                           on  /dev/pts                     type  devpts       (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000)
+tmpfs                                            on  /run                         type  tmpfs        (rw,nosuid,nodev,size=187220k,nr_inodes=819200,mode=755,inode64)
+tmpfs                                            on  /run/lock                    type  tmpfs        (rw,nosuid,nodev,noexec,relatime,size=5120k,inode64)
+cgroup2                                          on  /sys/fs/cgroup               type  cgroup2      (rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot)
+pstore                                           on  /sys/fs/pstore               type  pstore       (rw,nosuid,nodev,noexec,relatime)
+efivarfs                                         on  /sys/firmware/efi/efivars    type  efivarfs     (rw,nosuid,nodev,noexec,relatime)
+bpf                                              on  /sys/fs/bpf                  type  bpf          (rw,nosuid,nodev,noexec,relatime,mode=700)
+systemd-1                                        on  /proc/sys/fs/binfmt_misc     type  autofs       (rw,relatime,fd=32,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=1694)
+hugetlbfs                                        on  /dev/hugepages               type  hugetlbfs    (rw,nosuid,nodev,relatime,pagesize=2M)
+mqueue                                           on  /dev/mqueue                  type  mqueue       (rw,nosuid,nodev,noexec,relatime)
+tracefs                                          on  /sys/kernel/tracing          type  tracefs      (rw,nosuid,nodev,noexec,relatime)
+debugfs                                          on  /sys/kernel/debug            type  debugfs      (rw,nosuid,nodev,noexec,relatime)
+fusectl                                          on  /sys/fs/fuse/connections     type  fusectl      (rw,nosuid,nodev,noexec,relatime)
+configfs                                         on  /sys/kernel/config           type  configfs     (rw,nosuid,nodev,noexec,relatime)
+/var/lib/snapd/snaps/amazon-ssm-agent_9881.snap  on  /snap/amazon-ssm-agent/9881  type  squashfs     (ro,nodev,relatime,errors=continue,threads=single,x-gdu.hide,x-gvfs-hide)
+/var/lib/snapd/snaps/snapd_23545.snap            on  /snap/snapd/23545            type  squashfs     (ro,nodev,relatime,errors=continue,threads=single,x-gdu.hide,x-gvfs-hide)
+/var/lib/snapd/snaps/core22_1748.snap            on  /snap/core22/1748            type  squashfs     (ro,nodev,relatime,errors=continue,threads=single,x-gdu.hide,x-gvfs-hide)
+/dev/nvme0n1p16                                  on  /boot                        type  ext4         (rw,relatime)
+/dev/nvme0n1p15                                  on  /boot/efi                    type  vfat         (rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+binfmt_misc                                      on  /proc/sys/fs/binfmt_misc     type  binfmt_misc  (rw,nosuid,nodev,noexec,relatime)
+tmpfs                                            on  /run/user/1000               type  tmpfs        (rw,nosuid,nodev,relatime,size=93608k,nr_inodes=23402,mode=700,uid=1000,gid=1000,inode64)
+LABEL=cloudimg-rootfs	/	 ext4	discard,commit=30,errors=remount-ro	0 1
+LABEL=BOOT	/boot	ext4	defaults	0 2
+LABEL=UEFI	/boot/efi	vfat	umask=0077	0 1
