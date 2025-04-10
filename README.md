@@ -19,7 +19,8 @@ This script was created a bit as part of my learning. This was a little bit for 
 - ✅ Errors from system logs (e.g., from `syslog`)
 - ✅ Mount points and some file system types (`mount` and `fstab`)
 ## How to use
-Make the script executable: chmod +x system-health-check.sh
+Make the script executable: chmod +x system-health-check.sh 
+
 Run the script: ./system-health-check.sh or bash system-health-check.sh
 
   
