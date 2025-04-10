@@ -7,7 +7,6 @@ This script was created a bit as part of my learning. This was a little bit for 
 - ✅ Date and system run-time
 - ✅ OS version in addition to kernel.
 - ✅ A CPU load plus average (from `top` and `mpstat`).
-- ✅ Memory as well as swap usage
 - ✅ Some disk usage per each mount point (`df -h`)
 - ✅ Inode usage on filesystem (`df -i`)
 - ✅ Highest memory consuming processes exist. Highest CPU consuming processes exist, too.
